@@ -1,3 +1,4 @@
+/// <reference path="scripts/typings/jquery/jquery.d.ts"/>
 var RGBPI;
 (function (RGBPI) {
     var Greeter = (function () {
@@ -5,8 +6,8 @@ var RGBPI;
             this.count = 0;
         }
         Greeter.prototype.start = function () {
-            var _this = this;
-            this.timerToken = setInterval(function () { return console.log(":> " + _this.count++); }, 500);
+            //this.timerToken = setInterval(() => console.log(":> "+this.count++), 500);
+            $("h1").text("asdasd");
         };
         Greeter.prototype.stop = function () {
             clearTimeout(this.timerToken);

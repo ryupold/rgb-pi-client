@@ -4,11 +4,18 @@
 <head>
     <meta charset="utf-8" />
     <title>RGB-Pi Client</title>
-    <link rel="stylesheet" href="css/app.css" type="text/css" />
-    <script src="app.js"></script>
+    <!-- third party -->
+    <link rel="stylesheet" href="Content/bootstrap.css" type="text/css" />
+    <script src="scripts/jquery-2.1.4.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/angular.js"></script>
+
+    <link rel="stylesheet" href="Content/app.css" type="text/css" />
 </head>
-<body>
-    <h1>RGB-Pi</h1>
-    <p>hällö wörlt</p>
+<body ng-app="RGBPi">
+    <h1 id="tit">RGB-Pi</h1>
+    <p>{{'test'+123}}</p>
+
+    <script src="app.js"></script>
 </body>
 </html>
