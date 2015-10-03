@@ -1,27 +1,35 @@
-﻿
-/// <reference path="scripts/typings/jquery/jquery.d.ts"/>
+﻿/// <reference path="scripts/typings/angularjs/angular.d.ts"/>
+/// <reference path="scripts/typings/angularjs/angular-route.d.ts" />
 
-module RGBPI {
+//declare var angular: angular.IAngularStatic;
+//declare var $: JQueryStatic;
 
-    export class Greeter {
+module RGBPi {
+
+    export class AppController {
         count: number = 0;
         timerToken: number;
 
-        constructor() {
-            
+        static $inject = ["$http"];
+        constructor(private $http: ng.IHttpService) {
+            this.init();
+            this.load();
         }
 
-        start() {
-            //this.timerToken = setInterval(() => console.log(":> "+this.count++), 500);
+        init() {
             $("h1").text("asdasd");
         }
 
-        stop() {
-            clearTimeout(this.timerToken);
+        load() {
+            
         }
 
     }
+
+    angular.module("RGBPi");
 }
 
-var g = new RGBPI.Greeter();
-g.start();
+((): void=> {
+    var app = angular.module("RGBPi", ['ngRoute']);
+    app.config(RGBPi.Routes.configureRoutes);
+})()
