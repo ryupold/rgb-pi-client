@@ -5,6 +5,7 @@
 //declare var $: JQueryStatic;
 
 module RGBPi {
+    'use strict';
 
     export class AppController {
         count: number = 0;

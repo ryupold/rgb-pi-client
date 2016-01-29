@@ -4,6 +4,7 @@
 //declare var $: JQueryStatic;
 var RGBPi;
 (function (RGBPi) {
+    'use strict';
     class AppController {
         constructor($http) {
             this.$http = $http;
